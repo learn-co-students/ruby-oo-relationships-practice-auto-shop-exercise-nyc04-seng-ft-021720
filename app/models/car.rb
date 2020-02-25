@@ -1,14 +1,15 @@
 class Car
 
-  attr_reader :make, :model, :owner, :classification
+  attr_reader :make, :model, :owner, :classification, :mechanic
 
   @@all = []
 
-  def initialize(make, model, classification, owner)
+  def initialize(make, model, classification, owner, mechanic)
     @make = make
     @model = model
     @classification = classification
     @owner = owner
+    @mechanic = mechanic
     @@all << self
   end
 

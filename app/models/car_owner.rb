@@ -21,14 +21,14 @@ class CarOwner
 
   # Get a list of all the mechanics that a specific owner goes to
   def my_mechanics
-    self.cars_owned
+    cars_owned.map {|car| car.mechanic}
   end
 
   # Get the average amount of cars owned for all owners
   def self.avg_cars_owned
-    owners = CarOwner.all.count
-    cars = Car.all.count
-    (cars / owners).average
+    owners = CarOwner.all.count.to_f
+    cars = Car.all.count.to_f
+    (cars / owners)
   end
 
 end
