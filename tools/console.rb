@@ -4,4 +4,8 @@ def reload
   load 'config/environment.rb'
 end
 
-binding.pry
+
+john_wick = CarOwner.new("John Wick", "Mustang")
+
+john_wick.name
+
